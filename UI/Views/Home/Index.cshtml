@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Dependency Injection Özelliği</h1>
+    <p class="lead">
+        Projeye Dependency Injection Özelliği eklemek için 2 farklı şirkete ayrı ayrı sunulan kod varmış olarak düzenlenmiştir.
+        Seneryoda Mobven şirketi kullanıyor ise verilerin hepsi cache den gelecek şekilde ,
+        Farklı şirketlerde direkt veritabanından gelecek şekilde ayarlanmıştır.
+        Şirket değiştirmek için aşağıdaki butonları kullanabilirsiniz.
+    </p>
+    <p><a href="@Url.Action("ChangeCompany",new { @company = "Mobven" })" class="btn btn-primary btn-lg">Mobven (Cache kullanarak sistem çalışır)</a></p>
+    <p><a href="@Url.Action("ChangeCompany",new { @company = "Ertunç" })" class="btn btn-primary btn-lg">Diğer şirketler </a></p>
+</div>
